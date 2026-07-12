@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Juan
   productName: PyO_Parcial2_Juan_Bernardi
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -697,8 +697,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: PyO_Parcial2_Juan_Bernardi
-  metroPackageVersion: 
+  metroPackageName: PyOParcial2JuanBernardi
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -706,7 +706,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: PyO_Parcial2_Juan_Bernardi
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: PyO_Parcial2_Juan_Bernardi
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
