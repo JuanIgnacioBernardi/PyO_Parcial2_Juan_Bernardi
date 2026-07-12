@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 public class PlayerShoot : MonoBehaviour
 {
     [Header("Shooting Settings")]
@@ -10,12 +11,11 @@ public class PlayerShoot : MonoBehaviour
 
     private float cooldownTimer;
     public float DamageMultiplier { get; set; } = 1f;
-
     private void Update()
     {
         cooldownTimer -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer <= 0f)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && cooldownTimer <= 0f)
         {
             Shoot();
             cooldownTimer = fireCooldown;
