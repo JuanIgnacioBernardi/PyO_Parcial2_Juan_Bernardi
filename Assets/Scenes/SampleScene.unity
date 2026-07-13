@@ -211,6 +211,9 @@ GameObject:
   - component: {fileID: 453481548}
   - component: {fileID: 453481547}
   - component: {fileID: 453481549}
+  - component: {fileID: 453481552}
+  - component: {fileID: 453481551}
+  - component: {fileID: 453481550}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -411,6 +414,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &453481550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453481542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a5f7d77c805aa49a6835b5636da7fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StrengthPowerUp
+  duration: 5
+  cooldown: 15
+  playerShoot: {fileID: 453481543}
+  multiplier: 2
+--- !u!114 &453481551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453481542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e916e408078f2ee418bd68f16e3c705d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShieldPowerUp
+  duration: 5
+  cooldown: 15
+  playerHealth: {fileID: 453481548}
+--- !u!114 &453481552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453481542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561d64d23800f044fb710bff82f57501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PowerUpController
+  shieldPowerUp: {fileID: 453481551}
+  strengthPowerUp: {fileID: 453481551}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
