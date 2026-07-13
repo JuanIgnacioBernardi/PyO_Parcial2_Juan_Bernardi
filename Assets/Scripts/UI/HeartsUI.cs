@@ -1,16 +1,24 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class HeartsUI : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("References")]
+    [SerializeField] private HealthSystem playerHealth;
+    [SerializeField] private Image[] heartFills;
+    private void OnEnable()
     {
-        
+        playerHealth.onLifeChanged += HandleLifeChanged;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        playerHealth.onLifeChanged -= HandleLifeChanged;
+    }
+    private void HandleLifeChanged(float current, float max)
+    {
+        for (int i = 0; i < heartFills.Length; i++)
+        {
+            float heartValue = current - i;
+            heartFills[i].fillAmount = Mathf.Clamp01(heartValue);
+        }
     }
 }
