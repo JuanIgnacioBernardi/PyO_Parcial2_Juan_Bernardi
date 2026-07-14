@@ -31,6 +31,7 @@ public class HealthSystem : MonoBehaviour, IDamageable
         if (currentHealth <= 0)
         {
             currentHealth = 0;
+            onLifeChanged?.Invoke(currentHealth, maxHealth);
             onDie?.Invoke();
         }
         else

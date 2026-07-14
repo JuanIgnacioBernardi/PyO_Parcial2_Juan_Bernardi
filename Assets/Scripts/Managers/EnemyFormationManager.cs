@@ -5,7 +5,7 @@ public class EnemyFormationManager : MonoBehaviour
     [SerializeField] private Transform formationRoot;
     [SerializeField] private float moveSpeed = 1.5f;
     [SerializeField] private float horizontalPadding = 0.5f;
-    [Tooltip("1 for right, -1 for left")]
+    [Header("1 for right, -1 for left")]
     [SerializeField] private float initialDirection = 1f;
 
     private float minX;
