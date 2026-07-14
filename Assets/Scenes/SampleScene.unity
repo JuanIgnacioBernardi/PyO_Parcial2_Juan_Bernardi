@@ -1120,8 +1120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyFormationManager
   formationRoot: {fileID: 829821668}
-  moveSpeed: 1.8
+  moveSpeed: 1
   horizontalPadding: 0.5
+  initialDirection: 1
 --- !u!4 &829821668
 Transform:
   m_ObjectHideFlags: 0
@@ -1329,6 +1330,7 @@ MonoBehaviour:
   formationRoot: {fileID: 1190439909}
   moveSpeed: 1
   horizontalPadding: 0.5
+  initialDirection: -1
 --- !u!4 &1190439909
 Transform:
   m_ObjectHideFlags: 0
