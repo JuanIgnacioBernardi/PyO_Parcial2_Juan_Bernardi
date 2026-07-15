@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public abstract class PowerUpBase : MonoBehaviour
 {
@@ -5,10 +6,15 @@ public abstract class PowerUpBase : MonoBehaviour
     [SerializeField] private float duration = 5f;
     [SerializeField] private float cooldown = 15f;
 
+    public event Action OnPowerUpActivated;
+    public event Action OnPowerUpDeactivated;
+
     private float cooldownTimer;
     private float durationTimer;
-    private bool isActive;
+
+    public bool isActive { get; private set; }
     public bool IsReady => cooldownTimer <= 0f && !isActive;
+    public float RemainingDuration => durationTimer;
     public void Activate()
     {
         if (!IsReady) return;
@@ -17,6 +23,7 @@ public abstract class PowerUpBase : MonoBehaviour
         durationTimer = duration;
         cooldownTimer = cooldown;
         OnActivated();
+        OnPowerUpActivated?.Invoke();
     }
     private void Update()
     {
@@ -29,6 +36,7 @@ public abstract class PowerUpBase : MonoBehaviour
             {
                 isActive = false;
                 OnDeactivated();
+                OnPowerUpDeactivated?.Invoke();
             }
         }
     }
