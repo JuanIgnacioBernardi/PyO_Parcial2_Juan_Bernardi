@@ -1,11 +1,11 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 public class PowerUpIndicatorUI : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private PowerUpBase powerUp;
     [SerializeField] private GameObject indicatorRoot;
-    [SerializeField] private Text remainingText;
+    [SerializeField] private TMP_Text remainingText;
     private void OnEnable()
     {
         powerUp.OnPowerUpActivated += HandleActivated;
