@@ -42,7 +42,9 @@ public class EnemyFormationManager : MonoBehaviour
         float leftEdge = formationRoot.position.x - formationHalfWidth;
         float rightEdge = formationRoot.position.x + formationHalfWidth;
 
-        if (rightEdge >= maxX || leftEdge <= minX)
-            direction *= -1f;
+        if (rightEdge >= maxX && direction > 0f)
+            direction = -1f;
+        else if (leftEdge <= minX && direction < 0f)
+            direction = 1f;
     }
 }
